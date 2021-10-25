@@ -1,1 +1,2 @@
-# ra-hooks-context-use-effect
+# ra-hooks-context-use-effect [![Build status](https://ci.appveyor.com/api/projects/status/vdbgw40ojn0mvs75?svg=true)](https://ci.appveyor.com/project/barsich/ra-hooks-context-use-effect)
+[GithubPages](https://barsich.github.io/ra-hooks-context-use-effect/)

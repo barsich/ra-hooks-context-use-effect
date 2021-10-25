@@ -1,0 +1,51 @@
+body {
+  font-family: 'Mina', sans-serif;
+}
+
+#root {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.users {
+  display: flex;
+  width: 520px;
+  padding: 50px 0;
+}
+
+.users__list {
+  width: 250px;
+  list-style: none;
+  margin-right: 10px;
+}
+
+.list-item,
+.users__details div {
+  padding: 10px 15px;
+  border: 1px solid grey;
+  margin-bottom: -1px;
+}
+
+.users__details {
+  width: 250px;
+}
+
+.user-avatar {
+  max-width: 100%;
+}
+
+.active {
+  background-color: grey;
+  color: white;
+}
+
+.loading {
+  position: absolute;
+  top: 50px;
+  left: 0;
+}
