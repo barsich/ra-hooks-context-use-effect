@@ -7,15 +7,21 @@ export default function Users() {
   const [currentUserId, setCurrentUserId] = useState(0);
   const [currentUser, setCurrentUser] = useState(null);
   const [isLoading, setLoading] = useState(false);
+  const [hasError, setError] = useState(null);
 
   useEffect(() => {
     setLoading(true);
     fetch(process.env.REACT_APP_USERS_JSON)
-      .then((response) => response.json())
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Ошибка подключения, обновите страницу');
+        }
+        return response.json();
+      })
       .then((result) => {
         setUsersList(result);
       })
-      .catch((error) => console.error(error))
+      .catch((error) => setError(error.message))
       .finally(() => setLoading(false));
   }, []);
 
@@ -25,11 +31,16 @@ export default function Users() {
     }
     setLoading(true);
     fetch(`${process.env.REACT_APP_CURRENT_USER}${currentUserId}.json`)
-      .then((response) => response.json())
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error('Ошибка подключения, обновите страницу');
+      }
+      return response.json();
+    })
       .then((result) => {
         setCurrentUser(result);
       })
-      .catch((error) => console.error(error))
+      .catch((error) => setError(error.message))
       .finally(() => setLoading(false));
   }, [currentUserId]);
 
@@ -44,7 +55,11 @@ export default function Users() {
     <>
       {isLoading && <p className="loading">Loading...</p>}
       <div className="users">
-        <UsersList users={usersList} activeUser={currentUserId} onUserSelect={onUserSelect} />
+        {hasError ? (
+          <p className="error">{hasError}</p>
+        ) : (
+          <UsersList users={usersList} activeUser={currentUserId} onUserSelect={onUserSelect} />
+        )}
         {currentUser ? <UserDetails user={currentUser} /> : null}
       </div>
     </>
