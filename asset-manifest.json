@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/ra-hooks-context-use-effect/static/css/main.69c4be92.chunk.css",
+    "main.js": "/ra-hooks-context-use-effect/static/js/main.411afd80.chunk.js",
+    "main.js.map": "/ra-hooks-context-use-effect/static/js/main.411afd80.chunk.js.map",
+    "runtime-main.js": "/ra-hooks-context-use-effect/static/js/runtime-main.0fcc1d5c.js",
+    "runtime-main.js.map": "/ra-hooks-context-use-effect/static/js/runtime-main.0fcc1d5c.js.map",
+    "static/js/2.822e3626.chunk.js": "/ra-hooks-context-use-effect/static/js/2.822e3626.chunk.js",
+    "static/js/2.822e3626.chunk.js.map": "/ra-hooks-context-use-effect/static/js/2.822e3626.chunk.js.map",
+    "static/js/3.204e1358.chunk.js": "/ra-hooks-context-use-effect/static/js/3.204e1358.chunk.js",
+    "static/js/3.204e1358.chunk.js.map": "/ra-hooks-context-use-effect/static/js/3.204e1358.chunk.js.map",
+    "index.html": "/ra-hooks-context-use-effect/index.html",
+    "static/css/main.69c4be92.chunk.css.map": "/ra-hooks-context-use-effect/static/css/main.69c4be92.chunk.css.map",
+    "static/js/2.822e3626.chunk.js.LICENSE.txt": "/ra-hooks-context-use-effect/static/js/2.822e3626.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0fcc1d5c.js",
+    "static/js/2.822e3626.chunk.js",
+    "static/css/main.69c4be92.chunk.css",
+    "static/js/main.411afd80.chunk.js"
+  ]
+}
